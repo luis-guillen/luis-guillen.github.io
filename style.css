@@ -1,0 +1,1952 @@
+:root {
+    /* Color Variables */
+    --bg-dark: #1e2326;
+    --bg-darker: #252A2E;
+    --primary-color: #007BFF;
+    --text-light: #fff;
+    --transition-speed: 0.3s;
+    --bg-light: #f8f9fa;
+    --text-dark: #000000;
+    --header-dark: #252A2E;
+    --header-light: #ffffff;
+    --overlay-dark: rgba(30, 35, 38, 0.8);
+    --overlay-light: rgba(255, 255, 255, 0.8);
+    
+    /* Typography Variables */
+    --font-main: 'Work Sans', sans-serif;
+    --font-accent: 'Righteous';
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reusable Utility Classes */
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+/* Header Styles */
+.contenedor-header {
+    background: var(--header-dark);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a {
+    font-family: var(--font-accent);
+    font-size: 36px;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.contenedor-header header nav {
+    display: flex;
+}
+
+.contenedor-header header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+    color: var(--text-light);
+    margin: 0 15px;
+    padding: 3px;
+    transition: color var(--transition-speed);
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Nav */
+.nav-responsive {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Sections Common Styles */
+.section-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.section-light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* MENU */
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: var(--text-light);
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: var(--primary-color);
+}
+
+/* SECCION I N I C I O */
+.inicio {
+    background: linear-gradient(to top, var(--overlay-dark), var(--bg-dark)), url(img/fondo.jpeg);
+    background-size: cover;
+    height: 100vh;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    padding-top: 85px; /* Ajusta este valor para moverlo hacia abajo */
+    position: relative;
+    overflow: hidden;
+}
+
+.inicio .contenido-banner {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 40px;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeInUp 1s ease-out forwards;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-img {
+    flex: 0 0 300px; /* Aumentamos el tamaño mínimo */
+    margin-right: 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.contenedor-img:hover img {
+    transform: scale(1.05);
+}
+
+.contenedor-texto {
+    flex: 1;
+    text-align: center;
+}
+
+.contenedor-texto h1 {
+    font-size: 42px;
+    font-family: var(--font-accent);
+    color: var(--primary-color);
+    margin: 0 0 20px;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.contenedor-texto h2 {
+    font-size: 15px;
+    font-weight: normal;
+    animation: slideInFromRight 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.contenedor-texto .redes a {
+    color: var(--text-light);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--text-light);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.contenedor-texto .redes a:nth-child(1) { animation-delay: 0.6s; }
+.contenedor-texto .redes a:nth-child(2) { animation-delay: 0.8s; }
+.contenedor-texto .redes a:nth-child(3) { animation-delay: 1s; }
+.contenedor-texto .redes a:nth-child(4) { animation-delay: 1.2s; }
+
+.contenedor-texto .redes a:hover {
+    background-color: var(--primary-color);
+}
+
+.contenedor-texto h1 .typed {
+    animation: glowText 2s infinite;
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 15px; /* Partículas más grandes */
+    height: 15px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.4; /* Un poco más opacas */
+    animation: floatingParticles 15s linear infinite;
+    box-shadow: 0 0 10px var(--primary-color); /* Añadimos un brillo */
+}
+
+.inicio .contenido-banner {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 123, 255, 0);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(0, 123, 255, 0);
+    }
+}
+
+@keyframes floatingParticles {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 768px) {
+    .inicio .contenido-banner {
+        flex-direction: column;
+    }
+}
+
+/* SECCION SOBRE MI */
+.sobremi {
+    background-color: var(--bg-darker);
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background: var(--bg-dark);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-card.personal-info {
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-card.interests {
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Estilos para la información personal */
+.info-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.info-list li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.info-list i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 30px;
+    text-align: center;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-content strong {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-content span {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+/* Estilos para los intereses */
+.contenedor-intereses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.interest-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.interest-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.interest-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest-info h4 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.interest-info p {
+    color: var(--text-light);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Estilos para el botón de CV */
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    width: fit-content;
+    display: block;
+    margin: 40px auto 0;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.sobremi button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        gap: 2rem;
+        padding: 0 15px;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .info-list li {
+        gap: 0.8rem;
+    }
+
+    .contenedor-intereses {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sobremi {
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2 {
+    font-size: 48px;
+    font-family: var(--font-accent);
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: justify; /* Justifica el texto del resumen */
+}
+.sobremi .contenido-seccion p span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.sobremi .fila {
+    display: flex;
+}
+.sobremi .fila .col {
+    width: 50%;
+}
+.sobremi .fila .col h3 {
+    font-size: 28px;
+    font-family: var(--font-accent);
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul {
+    list-style: none;
+}
+.sobremi .fila .col ul li {
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong {
+    display: inline-block;
+    color: var(--primary-color);
+    width: 130px;
+}
+.sobremi .fila .col ul li span {
+    background-color: var(--primary-color);
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.sobremi .fila .col .interest-card {
+    background: var(--bg-darker);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobremi .fila .col .interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.sobremi .fila .col .interest-icon {
+    background: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.sobremi .fila .col .interest-card:hover .interest-icon {
+    transform: scale(1.1);
+}
+
+.sobremi .fila .col .interest-icon i {
+    font-size: 25px;
+    color: var(--text-light);
+}
+
+.sobremi .fila .col .interest-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.sobremi .fila .col .interest-info p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay {
+    width: 100%;
+}
+
+/* SECCION SKILLS */
+.skills-section {
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    padding: 50px 20px;
+}
+
+.skills-section .contenido-seccion {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.skills-section .skills-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-section .skills-column {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skills-section .section-title {
+    font-size: 48px;
+    font-family: var(--font-accent);
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+.skills-section .skills-subtitle {
+    font-size: 32px;
+    font-family: var(--font-accent);
+    text-align: center;
+    margin: 40px 0 30px;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.skills-section .skills-subtitle::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+.skill-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.skill-level {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.skill-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    .skill-title {
+        font-size: 1.1rem;
+    }
+
+    .skill-level {
+        font-size: 1.25rem;
+    }
+
+    .skill-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* Light mode styles */
+.light-mode .skills-section {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.light-mode .skills-section .section-title {
+    color: var(--text-dark);
+}
+
+.light-mode .skills-section .skills-subtitle {
+    color: var(--primary-color);
+}
+
+.light-mode .skills-section .skills-subtitle::after {
+    background-color: var(--primary-color);
+}
+
+.light-mode .skill-card {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .skill-card:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .skill-title {
+    color: var(--text-dark);
+}
+
+.light-mode .skill-description {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* SECCION CV */
+.CV {
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    padding: 50px 20px;
+}
+.CV .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.CV h2 {
+    font-size: 48px;
+    font-family: var(--font-accent);
+    text-align: center;
+    padding: 20px 0;
+
+}
+.CV .fila {
+    display: flex;
+    justify-content: space-between;
+}
+.CV .fila .col {
+    width: 49%;
+    padding: 0 20px;
+}
+.CV .fila .col h3 {
+    font-size: 28px; /* Tamaño de fuente */
+    font-family: var(--font-accent); /* Tipografía */
+    margin-bottom: 40px; /* Margen inferior */
+    text-align: center; /* Centra el texto */
+}
+.CV .fila .izquierda {
+    border-right: 2px solid var(--bg-darker);
+}
+.CV .fila .derecha {
+    border-left: 2px solid var(--bg-darker);
+}
+.CV .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: var(--bg-darker);
+    position: relative;
+}
+.CV .fila .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.CV .fila .item .casa {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.CV .fila .item .fecha {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.CV .fila .item p {
+    line-height: 24px;
+}
+.CV .fila .izq {
+    border-right: 2px solid var(--primary-color);
+    margin-right: 20px;
+}
+.CV .fila .der {
+    border-left: 2px solid var(--primary-color);
+    margin-left: 20px;
+}
+.CV .fila .item .conectori {
+    height: 2px;
+    background-color: var(--primary-color);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.CV .fila .item .conectori .circuloi {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.CV .fila .item .conectord {
+    height: 2px;
+    background-color: var(--primary-color);
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.CV .fila .item .conectord .circulod {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+.CV button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    width: fit-content;
+    display: block;
+    margin: 40px auto 0;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.CV button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+/* SECCION PROJECTS */
+.projects {
+    background-color: var(--bg-darker);
+    color: var(--text-light); /* Color del texto */
+    padding: 50px 20px; /* Espaciado */
+    margin: 10px;
+}
+
+.projects .contenido-seccion {
+    max-width: 1100px; /* Ancho máximo */
+    margin: auto; /* Centrado */
+}
+
+.projects h2 {
+    font-size: 48px; /* Tamaño de fuente */
+    font-family: var(--font-accent); /* Tipografía */
+    text-align: center; /* Alineación centrada */
+    padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+.projects .fila {
+    display: flex; /* Flexbox para alineación */
+    justify-content: space-between; /* Espaciado entre columnas */
+}
+
+.projects .fila .col {
+    width: 49%; /* Ancho de cada columna */
+}
+
+.projects .fila .col img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+}
+
+.projects .fila .col.derecha {
+    padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+.projects .titulo-publicacion {
+    text-align: center; /* Centra el título de la publicación */
+    font-size: 24px; /* Tamaño de fuente para el título de la publicación */
+    font-weight: bold; /* Negrita para destacar el título */
+    margin-top: 10px; /* Espacio superior */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+.projects .fecha-publicacion {
+    display: block; /* Para que ocupe toda la línea */
+    color: var(--primary-color); /* Color para la fecha */
+    margin-bottom: 50px; /* Aumentar el margen inferior para crear espacio */
+    text-align: center; /* Centra la fecha de publicación */
+}
+
+
+.projects .resumen {
+    line-height: 24px; /* Espaciado entre líneas del resumen */
+    text-align: justify; /* Justifica el texto del resumen */
+}
+
+/* SECCION PORTFOLIO */
+.portfolio {
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    padding: 50px 20px;
+}
+.portfolio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2 {
+    font-size: 48px;
+    font-family: var(--font-accent);
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.proyecto {
+    perspective: 1000px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px; /* Altura fija para todas las tarjetas */
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.proyecto:nth-child(2) { animation-delay: 0.2s; }
+.proyecto:nth-child(3) { animation-delay: 0.4s; }
+.proyecto:nth-child(4) { animation-delay: 0.6s; }
+.proyecto:nth-child(5) { animation-delay: 0.8s; }
+.proyecto:nth-child(6) { animation-delay: 1s; }
+.proyecto:nth-child(7) { animation-delay: 1.2s; }
+
+.proyecto-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.proyecto:hover .proyecto-inner {
+    transform: rotateY(180deg);
+}
+
+.proyecto-front, .proyecto-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.proyecto-front {
+    background: var(--bg-dark);
+}
+
+.proyecto-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proyecto:hover .proyecto-front img {
+    transform: scale(1.1);
+}
+
+.proyecto-back {
+    background: var(--bg-dark);
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.proyecto-content {
+    color: var(--text-light);
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.proyecto-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.proyecto-content p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.proyecto-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.language-level {
+    width: 100%;
+    margin-top: auto;
+    padding: 0 20px;
+}
+
+.level-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.level-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* SECCION CONTACTO */
+.contacto {
+    background-image: url(img/contact_bg.png);
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    padding: 50px 0;
+}
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2 {
+    font-size: 48px;
+    font-family: var(--font-accent);
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila {
+    display: flex;
+}
+.contacto .col {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    font-size: 18px;
+}
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: var(--text-light);
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay {
+    width: 100%;
+}
+.contacto .col img {
+    width: 100%;
+}
+.contacto .col .info {
+    position: absolute;
+    top: 40%;
+    background-color: var(--bg-darker);
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+.contacto .col .info ul {
+    list-style: none;
+    
+}
+.contacto .col .info ul li {
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i {
+    color: var(--primary-color);
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+footer {
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes {
+    margin-bottom: 20px;
+}
+footer .redes a {
+    color: var(--text-dark);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--text-dark);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+footer .copyright {
+    margin-top: 20px;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 980px) {
+    nav {
+        display: none;
+    }
+    .nav-responsive {
+        display: block;
+    }
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: var(--bg-darker);
+        width: 180px;
+    }
+    nav.responsive ul {
+        display: block !important;
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid var(--text-light);
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .sobremi .fila {
+        display: block;
+    }
+    .sobremi .fila .col {
+        width: fit-content;
+    }
+
+
+    .CV .fila {
+        display: block;
+    }
+    .CV .fila .col {
+        width: 90%;
+    }
+    .CV .fila .derecha {
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria {
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto {
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img {
+        width: 100%;
+    }
+    .contacto .fila {
+        display: block;
+    }
+    .contacto .fila .col {
+        width: 100%;
+    }
+}
+
+/* Definimos variables de colores para los modos claro y oscuro */
+.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.light-mode .contenedor-intereses {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.light-mode .contenedor-header {
+    background: var(--header-light);
+    color: var(--text-dark);
+}
+
+.light-mode .contenedor-header header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.light-mode .contenedor-header header .logo a,
+.light-mode .contenedor-header header nav ul li a {
+    color: var(--text-dark);
+
+}
+.light-mode .inicio {
+    background: linear-gradient(to top, var(--overlay-light), var(--bg-light)),
+    url(img/fondo.jpeg);
+}
+
+.light-mode .sobremi,
+.light-mode .skills-section,
+.light-mode .CV,
+.light-mode .portfolio,
+.light-mode .contacto {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Ajustamos botones, enlaces y otros elementos */
+.light-mode button,
+.light-mode .contacto button,
+.light-mode .portfolio .galeria .proyecto .overlay {
+    background-color: var(--primary-color);
+    color: var(--bg-light);
+}
+
+/* poner contenedor de intereses en modo claro y con efecto hover */
+.light-mode .sobremi .fila .col .contenedor-intereses .interes:hover {
+    background-color: var(--primary-color);
+}
+.light-mode .sobremi .fila .col .contenedor-intereses .interes {
+    background-color: #c1cad1;
+    color: var(--text-dark);
+}
+.light-mode .sobremi .fila .col .interest-card {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .fila .col .interest-card a {
+    color: var(--text-dark);
+    
+}
+
+.light-mode .sobremi .fila .col .interest-info p {
+    color: var(--text-dark);
+}
+
+.light-mode footer {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.light-mode footer .redes a {
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+}
+.light-mode footer .copyright {
+    color: var(--text-dark);
+}
+
+/* Variables para el modo claro */
+:root {
+    --bg-light: #ffffff;
+    --text-dark: #333333;
+    --header-light: #f5f5f5;
+    --overlay-light: rgba(255, 255, 255, 0.9);
+    --primary-color-light: #e3f2fd;
+    --border-light: #e0e0e0;
+}
+
+/* Modo Claro - Ajustes generales */
+.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Sección Inicio - Modo Claro */
+.light-mode .inicio .contenido-banner {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .inicio .contenedor-texto h1 {
+    color: var(--primary-color);
+}
+
+.light-mode .inicio .contenedor-texto h2 {
+    color: var(--text-dark);
+}
+
+.light-mode .inicio .redes a {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.light-mode .inicio .redes a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-light);
+}
+
+/* Sección Sobre Mi - Modo Claro */
+.light-mode .sobremi {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .contenido-seccion {
+    background-color: var(--bg-light);
+}
+
+.light-mode .sobremi .fila {
+    background-color: var(--bg-light);
+}
+
+.light-mode .sobremi .intro-text {
+    color: var(--text-dark);
+}
+
+/* Tarjetas de interés */
+.light-mode .sobremi .fila .col .interest-card {
+    background-color: var(--primary-color-light);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.light-mode .sobremi .fila .col .interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .sobremi .fila .col .interest-card i {
+    color: var(--primary-color);
+}
+
+.light-mode .sobremi .fila .col .interest-card h3 {
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .fila .col .interest-card a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.light-mode .sobremi .fila .col .interest-card:hover a {
+    color: var(--bg-light);
+}
+
+.light-mode .sobremi .fila .col .interest-info {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .sobremi .fila .col .interest-info h3 {
+    color: var(--primary-color);
+}
+
+.light-mode .sobremi .fila .col .interest-info p {
+    color: var(--text-dark);
+}
+
+
+
+.light-mode .projects {
+    background-color: var(--bg-light);
+    color: var(--text-dark); /* Color del texto */
+    padding: 50px 20px; /* Espaciado */
+    margin: 10px;
+}
+
+
+/* Información personal */
+.light-mode .sobremi .about-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.light-mode .sobremi .about-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.light-mode .sobremi .about-card .info-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .about-card .info-item:last-child {
+    border-bottom: none;
+}
+
+.light-mode .sobremi .about-card .info-item strong {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.light-mode .sobremi .about-card .info-item span {
+    color: var(--text-dark-muted);
+}
+
+/* Intereses en modo claro */
+.light-mode .sobremi .interests-section {
+    background-color: var(--bg-light);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .sobremi .interests-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+
+.light-mode .sobremi .about-text {
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .interests-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.light-mode .sobremi .interest-card {
+    background-color: var(--primary-color-light);
+    border: 1px solid var(--primary-color);
+    color: var(--text-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.light-mode .sobremi .interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+}
+
+.light-mode .sobremi .interest-card i {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.light-mode .sobremi .interest-card:hover i {
+    color: var(--bg-light);
+}
+
+.light-mode .sobremi .interest-card h3 {
+    color: var(--text-dark);
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.light-mode .sobremi .interest-card:hover h3 {
+    color: var(--bg-light);
+}
+
+.light-mode .sobremi .interest-card p {
+    color: var(--text-dark-muted);
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.light-mode .sobremi .interest-card:hover p {
+    color: var(--bg-light);
+}
+
+/* Ajustes específicos para los enlaces dentro de las tarjetas */
+.light-mode .sobremi .interest-card a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.light-mode .sobremi .interest-card:hover a {
+    color: var(--bg-light);
+}
+
+/* Personal Information items en modo claro */
+.light-mode .sobremi .about-card .info-content {
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .about-card .info-content strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.light-mode .sobremi .about-card .info-content span {
+    color: var(--text-dark);
+}
+
+.light-mode .sobremi .about-card p {
+    color: var(--text-dark);
+}
+
+/* Sección Portfolio - Modo Claro */
+.light-mode .portfolio {
+    background-color: var(--header-light);
+}
+
+.light-mode .portfolio .galeria .proyecto {
+    background-color: var(--bg-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-light);
+}
+
+.light-mode .portfolio .galeria .proyecto h3 {
+    color: var(--primary-color);
+}
+
+/* Sección CV - Modo Claro */
+.light-mode .CV {
+    background-color: var(--bg-light);
+}
+
+.light-mode .CV .fila {
+    border-left: 2px solid var(--primary-color);
+}
+
+.light-mode .CV .fila .item {
+    background-color: var(--bg-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-light);
+}
+
+.light-mode .CV .fila .item h4 {
+    color: var(--primary-color);
+}
+
+/* Sección Contacto - Modo Claro */
+.light-mode .contacto {
+    background-color: var(--header-light);
+}
+
+.light-mode .contacto .fila {
+    background-color: var(--bg-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-light);
+}
+
+.light-mode .contacto input,
+.light-mode .contacto textarea {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+}
+
+.light-mode .contacto button {
+    background-color: var(--primary-color);
+    color: var(--bg-light);
+    border: none;
+}
+
+.light-mode .contacto button:hover {
+    background-color: var(--primary-color-dark, #0056b3);
+}
+
+.light-mode .contacto .info {
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-light);
+}
+
+/* Partículas en modo claro */
+.light-mode .particle {
+    background: var(--primary-color);
+    opacity: 0.2;
+}
+
+/* Títulos de sección en modo claro */
+.light-mode .titulo-seccion {
+    color: var(--text-dark);
+}
+
+.light-mode .titulo-seccion::after {
+    background-color: var(--primary-color);
+}
+
+/* Personal Information en modo claro */
+.light-mode .sobremi .about-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.light-mode .sobremi .about-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Intereses en modo claro */
+.light-mode .sobremi .interests-section {
+    background-color: var(--bg-light);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .sobremi .interests-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.light-mode .sobremi .interests-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.light-mode .sobremi .interest-card {
+    background-color: var(--primary-color-light);
+    border: 1px solid var(--primary-color);
+    color: var(--text-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.light-mode .sobremi .interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+}
+
+.light-mode .sobremi .interest-card i {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.light-mode .sobremi .interest-card:hover i {
+    color: var(--bg-light);
+}
+
+.light-mode .sobremi .interest-card h3 {
+    color: var(--text-dark);
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.light-mode .sobremi .interest-card:hover h3 {
+    color: var(--bg-light);
+}
+
+.light-mode .sobremi .interest-card p {
+    color: var(--text-dark-muted);
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.light-mode .sobremi .interest-card:hover p {
+    color: var(--bg-light);
+}
+
+/* Ajustes específicos para los enlaces dentro de las tarjetas */
+.light-mode .sobremi .interest-card a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.light-mode .sobremi .interest-card:hover a {
+    color: var(--bg-light);
+}
+
+/* ====== MODO CLARO ====== */
+.light-mode #dark-mode-toggle {
+    background-color: #ffcc00; /* Amarillo para diferenciar */
+}
+
+.light-mode #dark-mode-toggle i {
+    transform: rotate(180deg);
+    color: #000;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#dark-mode-toggle:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-color-dark, #0056b3);
+}

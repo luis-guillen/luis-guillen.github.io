@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">LUIS</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">HOME</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">ABOUT ME</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#CV" onclick="seleccionar()">CV</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#projects" onclick="seleccionar()">PUBLICATIONS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+<!-- SECCIÓN INICIO -->
+<section id="inicio" class="inicio">
+    <div class="contenido-banner">
+        <div class="contenedor-img">
+            <img src="img/main_photo.jpeg" alt="">
+        </div>
+        <div class="contenedor-texto">
+            <h1 id="typed-text">Luis Guillén Servera</h1>
+            <h2>Data Scientist and Engineer</h2>
+            <div class="redes">
+                <a href="mailto:luisgservsp@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/luis-guillen-servera/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/luis-guillen" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="intro-text"><span class="highlight">Hi, I'm Luis.</span> As a Data Scientist and Engineer, I'm passionate about projects and finding innovative solutions to challenges. I enjoy collaborating with teams and sharing knowledge to achieve better results. Over the years, I have gained experience in programming languages such as Python, R, and Java, as well as various libraries and packages. Additionally, I have developed a strong understanding of Machine Learning, Deep Learning, data cleaning and preprocessing, and data visualization techniques. Throughout my training as a Data Scientist, I have also strengthened various soft skills, such as critical thinking, problem-solving and communication, which are essential for effective data science.</p>
+                </div>
+
+                <div class="about-cards">
+                    <!-- datos personales -->
+                    <div class="about-card personal-info">
+                        <h3>Personal Information</h3>
+                        <ul class="info-list">
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <div class="info-content">
+                                    <strong>Phone Number</strong>
+                                    <span>+34 609 43 07 41</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <div class="info-content">
+                                    <strong>Email</strong>
+                                    <span>luisgservsp@gmail.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="info-content">
+                                    <strong>City</strong>
+                                    <span>Las Palmas de Gran Canaria</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-briefcase"></i>
+                                <div class="info-content">
+                                    <strong>Current position</strong>
+                                    <span>Actively seeking employment</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- intereses -->
+                    <div class="about-card interests">
+                        <h3>Interests</h3>
+                        <div class="contenedor-intereses">
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-language"></i>
+                                </div>
+                                <div class="interest-info">
+                                    <h4>LANGUAGES</h4>
+                                    <p>Passionate about learning and practicing different languages</p>
+                                </div>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-utensils"></i>
+                                </div>
+                                <div class="interest-info">
+                                    <h4>COOKING</h4>
+                                    <p>Passionate about cooking and trying new recipes</p>
+                                </div>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-plane"></i>
+                                </div>
+                                <div class="interest-info">
+                                    <h4>TRAVELLING</h4>
+                                    <p>Love exploring new places and cultures</p>
+                                </div>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-car"></i>
+                                </div>
+                                <div class="interest-info">
+                                    <h4>CARS</h4>
+                                    <p>I love to drive and experiment with new cars</p>
+                                </div>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div class="interest-info">
+                                    <h4>MARKETS</h4>
+                                    <p>Following financial markets and trends</p>
+                                </div>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                <div class="interest-info">
+                                    <h4>READING</h4>
+                                    <p>Reading books and learning new things</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="img/CV.pdf" download>
+                <button>
+                    Download Resume <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills-section" id="skills">
+        <div class="contenido-seccion">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-columns">
+                <!-- Hard Skills Column -->
+                <div class="skills-column">
+                    <h3 class="skills-subtitle">Hard Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-python skill-icon"></i>
+                            <h3 class="skill-title">Python</h3>
+                            <div class="skill-level">90%</div>
+                            <p class="skill-description">Data Science, ML & Data Visualization</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-java skill-icon"></i>
+                            <h3 class="skill-title">Java</h3>
+                            <div class="skill-level">90%</div>
+                            <p class="skill-description">Data Engineering & App Development</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-chart-line skill-icon"></i>
+                            <h3 class="skill-title">R</h3>
+                            <div class="skill-level">85%</div>
+                            <p class="skill-description">Statistical Analysis</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-icon"></i>
+                            <h3 class="skill-title">SQL & NoSQL</h3>
+                            <div class="skill-level">75%</div>
+                            <p class="skill-description">Database Management</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-linux skill-icon"></i>
+                            <h3 class="skill-title">Linux & Servers</h3>
+                            <div class="skill-level">80%</div>
+                            <p class="skill-description">System Administration</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-robot skill-icon"></i>
+                            <h3 class="skill-title">NLP</h3>
+                            <div class="skill-level">75%</div>
+                            <p class="skill-description">Natural Language Processing & Analysis</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-terminal skill-icon"></i>
+                            <h3 class="skill-title">C/C++</h3>
+                            <div class="skill-level">70%</div>
+                            <p class="skill-description">Systems Programming</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Column -->
+                <div class="skills-column">
+                    <h3 class="skills-subtitle">Soft Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fas fa-users skill-icon"></i>
+                            <h3 class="skill-title">Team Work</h3>
+                            <div class="skill-level">90%</div>
+                            <p class="skill-description">Collaborative Problem Solving</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-comments skill-icon"></i>
+                            <h3 class="skill-title">Communication</h3>
+                            <div class="skill-level">85%</div>
+                            <p class="skill-description">Clear, Concise & Effective</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-chalkboard skill-icon"></i>
+                            <h3 class="skill-title">Storytelling with Data</h3>
+                            <div class="skill-level">85%</div>
+                            <p class="skill-description">Engaging & Informative</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-palette skill-icon"></i>
+                            <h3 class="skill-title">Creativity</h3>
+                            <div class="skill-level">90%</div>
+                            <p class="skill-description">Innovative Solutions</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-crown skill-icon"></i>
+                            <h3 class="skill-title">Leadership</h3>
+                            <div class="skill-level">90%</div>
+                            <p class="skill-description">Team Management</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-brain skill-icon"></i>
+                            <h3 class="skill-title">Problem Solving</h3>
+                            <div class="skill-level">95%</div>
+                            <p class="skill-description">Lateral Thinking & Decision Making</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-lightbulb skill-icon"></i>
+                            <h3 class="skill-title">Proactivity</h3>
+                            <div class="skill-level">100%</div>
+                            <p class="skill-description">Initiative & Action-Driven</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CV -->
+    <section id="CV" class="CV">
+        <div class="contenido-seccion">
+            <h2>CV</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Education</h3> <!-- Este encabezado estará centrado -->
+                    <div class="item izq">
+                        <h4>Bachelor's Degree in Data Science and Engineering</h4>
+                        <span class="casa">Universidad de Las Palmas de Gran Canaria</span>
+                        <span class="fecha">2020 - 2025</span>
+                        <p>This degree focuses specifically on carrying out the analysis, design, development and manufacture of machines, motors, mechanisms and mechanical systems, which involves the understanding of a broad spectrum of physical phenomena, as well as the development of creative skills in technological design as well as analytical and problem-solving skills. The degree entitles the holder to practice the regulated profession of Industrial Technical Engineer. GPA: 3.156. Final Project note: 9,6 out of 10.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Technological baccalaureate</h4>
+                        <span class="casa">IES Guanarteme, Las Palmas de Gran Canaria</span>
+                        <span class="fecha">2018 - 2020</span>
+                        <p>I completed my specialization in the technological sciences field, which allowed me to access my higher education. My final grade in high school was 9.1 out of 10.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Work Experience</h3> <!-- Este encabezado estará centrado -->
+
+                    <div class="item der">
+                        <h4> Data Scientist Internship</h4>
+                        <span class="casa">Astican</span>
+                        <span class="fecha">october 2024 - december 2024</span>
+                        <p>As a Data Scientist, I was responsible for conducting data analysis and generating reports using Python, Excel, and Power BI to optimize operational efficiency. Through these analyses, I provided valuable insights that supported data-driven decision-making within the organization.
+
+                            I designed and developed interactive dashboards in Power BI Service, integrating them with SQL Server and Azure to enable real-time data visualization and monitoring. These dashboards facilitated better tracking of key performance indicators, improving operational transparency and efficiency.
+                            
+                            Additionally, I automated workflows and data processing using Power Apps, enhancing the overall decision-making process within the shipyard. By streamlining data management and automation, I contributed to reducing manual effort and improving the accuracy and timeliness of business insights.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                    <div class="item der">
+                        <h4>Projects internship in the projects team, HELICoiD</h4>
+                        <span class="casa">Instituto Universitario de Microelectrónica Aplicada de Canarias (IUMA)</span>
+                        <span class="fecha">2023 - 2024</span>
+                        <p>Projects has been conducted in the field of hyperspectral imaging and robotic surgery guided by artificial intelligence, as well as the development of computer models and simulations for the analysis of biomedical systems. Throughout this process, specific skills in biomedical engineering have been acquired, including Python programming and mastery of the ROS system. In addition, we have collaborated with other members of the projects group to exchange knowledge and enrich perspectives in the area.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <a href="img/CV.pdf" download>
+                <button>
+                    Download Resume <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+
+        <!-- SECCION PORTFOLIO -->
+        <section id="portfolio" class="portfolio">
+            <div class="contenido-seccion">
+                <h2 class="section-title">PORTFOLIO</h2>
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="project">PROJECTS</button>
+                    <button class="filter-btn" data-filter="language">LANGUAGES</button>
+                </div>
+                <div class="galeria">
+                    <div class="proyecto" data-category="project">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/imagen1.png" alt="Project image">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>Distributed Query Engine</h3>
+                                    <p>Containerized Crawler, Indexer and Query Engine using HazelCast in Java</p>
+                                    <div class="proyecto-tech">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">HazelCast</span>
+                                        <span class="tech-tag">MongoDB</span>
+                                        <span class="tech-tag">Docker</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proyecto" data-category="project">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/logo.png" alt="Project image">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>Real Time Climate Data</h3>
+                                    <p>Display of real time climate using python</p>
+                                    <div class="proyecto-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">MongoDB</span>
+                                        <span class="tech-tag">TKinter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proyecto" data-category="project">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/etl.jpg" alt="Project image">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>ETL</h3>
+                                    <p>Extract, Transform and Load of data using Python</p>
+                                    <div class="proyecto-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Pandas</span>
+                                        <span class="tech-tag">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proyecto" data-category="language">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/union_jack.png" alt="English flag">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>English Level: C1</h3>
+                                    <div class="language-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 95%"></div>
+                                        </div>
+                                        <span>Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proyecto" data-category="language">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/imagen6.jpg" alt="French flag">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>French Level: B1</h3>
+                                    <div class="language-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 65%"></div>
+                                        </div>
+                                        <span>Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proyecto" data-category="language">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/imagen7.jpg" alt="Spanish flag">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>Spanish Level: Native</h3>
+                                    <div class="language-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 100%"></div>
+                                        </div>
+                                        <span>Native</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proyecto" data-category="language">
+                        <div class="proyecto-inner">
+                            <div class="proyecto-front">
+                                <img src="img/germany.png" alt="German flag">
+                            </div>
+                            <div class="proyecto-back">
+                                <div class="proyecto-content">
+                                    <h3>German Level: B1</h3>
+                                    <div class="language-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 65%"></div>
+                                        </div>
+                                        <span>Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- SECCION Publications -->
+    <section id="projects" class="projects">
+        <div class="contenido-seccion">
+            <h2>Publications</h2> <!-- Título de la sección -->
+            
+            <h3 class="titulo-publicacion">La Incorporación de la Inteligencia Artificial en PYMEs españolas: una tendencia en auge</h3> <!-- Título de la publicación -->
+            <span class="fecha-publicacion">Publication date: December 2024</span> <!-- Fecha de publicación -->
+            
+            <div class="fila">
+                <div class="col izquierda">
+                    <img src="img/portada.png" alt="Portada del artículo" class="imagen-investigacion">
+                </div>
+                <div class="col derecha">
+                    <p class="resumen">The image displays the cover of an article titled "La Incorporación de la Inteligencia Artificial en PYMEs españolas: una tendencia en auge" The article, authored by Luis Guillén Servera, a student of Data Science and Engineering at the University of Las Palmas de Gran Canaria, explores the increasing adoption of artificial intelligence (AI) in small and medium-sized enterprises (SMEs) in Spain. It highlights how AI technologies, such as chatbots and generative tools, are being utilized to optimize costs and automate processes in areas like marketing, sales, and product development. Despite challenges like high costs and a lack of technical expertise, SMEs are overcoming these barriers through SaaS services and collaborations with technology providers. The article underscores AI's role in digital transformation, fostering innovation and competitiveness among Spanish SMEs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACT</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Your Phone number">
+                    <input type="text" placeholder="Mailing Address">
+                    <input type="text" placeholder="Subject">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button id="sendMessage">
+                        Send message <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+
+                <!-- Mapa -->
+                <div class="col">
+                    <iframe 
+                        id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56303.30486208126!2d-15.480816798655116!3d28.11735459291013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40950e91c097d1%3A0xab36b5ac5338ba65!2sLas%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1738371264039!5m2!1ses!2ses"
+                        width="100%" 
+                        height="550" 
+                        style="border:0; margin-bottom: 50px;"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="info" id="infoBox">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Las Palmas de Gran Canaria
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Call me at: +34 609430741
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: luisgservsp@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <!-- Botón para enviar correo -->
+            <a href="mailto:luisgservsp@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <!-- Botón para redirigir a LinkedIn en una nueva ventana -->
+            <a href="https://www.linkedin.com/in/luis-guillen-servera/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+        <p class="copyright">Luis Guillén Servera © 2024</p>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>    
+        
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.getElementById('sendMessage').addEventListener('click', function() {
+            alert("ATENCIÓN: el correo no ha sido enviado, póngase en contacto directo enviando un correo a luisgservsp@gmail.com");
+        });
+    </script>
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+</body>
+</html>
