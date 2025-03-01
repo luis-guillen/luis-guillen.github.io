@@ -543,6 +543,24 @@ html {
     border-color: var(--primary-color);
 }
 
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cv-buttons a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    .cv-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 768px) {
     .about-content {
         gap: 2rem;
@@ -1522,6 +1540,7 @@ footer .copyright {
     background: linear-gradient(to top, var(--overlay-light), var(--bg-light)),
     url(img/fondo.jpeg);
 }
+
 
 .light-mode .sobremi,
 .light-mode .skills-section,
