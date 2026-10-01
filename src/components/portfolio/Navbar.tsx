@@ -70,7 +70,7 @@ const Navbar = () => {
       <nav className="mx-auto flex h-16 max-w-page items-center justify-between px-6 md:px-10">
         <a href="#top" className="flex items-baseline gap-3 whitespace-nowrap">
           <span className="text-base font-medium tracking-tight">Luis Guillén</span>
-          <span className="label-mono hidden xl:inline">ML Engineer</span>
+          <span className="label-mono hidden xl:inline">AI Engineer</span>
         </a>
 
         <ul className="hidden items-center gap-6 xl:flex">

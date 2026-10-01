@@ -1,7 +1,5 @@
 import { CSSProperties, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocalTime } from "@/hooks/use-local-time";
-import { useScramble } from "@/hooks/use-scramble";
 import { useCountUp } from "@/hooks/use-count-up";
 import { useInView } from "@/hooks/use-in-view";
 import Marquee from "./Marquee";
@@ -12,19 +10,10 @@ import { cvFor } from "@/lib/cv";
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/luis-guillen" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/luis-guillen-servera/" },
-  { label: "Email", href: "mailto:luisgservsp@gmail.com" },
+  { label: "Email", href: "mailto:guillenserveraluis@gmail.com" },
 ];
 
 const delay = (ms: number) => ({ "--rise-delay": `${ms}ms` }) as CSSProperties;
-
-const Scrambled = ({ text, at }: { text: string; at: number }) => {
-  const out = useScramble(text, { delay: at, duration: 750 });
-  return (
-    <span aria-label={text}>
-      <span aria-hidden>{out}</span>
-    </span>
-  );
-};
 
 const Metric = ({ value, label, start }: { value: string; label: string; start: boolean }) => {
   const shown = useCountUp(value, start);
@@ -67,7 +56,6 @@ function useHeroParallax() {
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const cv = cvFor(i18n.language);
-  const time = useLocalTime();
   const headlineRef = useHeroParallax();
   const [metricsRef, metricsInView] = useInView<HTMLDListElement>({ once: true });
 
@@ -78,28 +66,11 @@ const HeroSection = () => {
   return (
     <section id="top" className="hero-glow relative overflow-hidden">
       <div className="mx-auto max-w-page px-6 pb-14 pt-28 md:px-10 md:pb-20 md:pt-36">
-        {/* Status line: decodes like a terminal */}
-        <div
-          className="veil rise flex w-fit flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground"
-          style={delay(0)}
-        >
-          <span className="flex items-center gap-2">
-            <span className="blink inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-            <Scrambled text={t("hero.open")} at={150} />
-          </span>
-          <span className="hidden text-border sm:inline">/</span>
-          <Scrambled text={t("hero.location")} at={300} />
-          <span className="hidden text-border sm:inline">/</span>
-          <span>
-            {time} <span className="text-muted-foreground/60">{t("hero.localTime")}</span>
-          </span>
-        </div>
-
         {/* Headline: phrases swap with a colour sweep, then gentle scroll parallax */}
         <div ref={headlineRef} className="will-change-transform">
           <RotatingHeadline
             phrases={t("hero.phrases", { returnObjects: true }) as string[]}
-            className="font-display mt-10 max-w-[15em] text-[clamp(2.9rem,7.4vw,7rem)] font-normal leading-[1.02] tracking-[-0.025em] md:mt-14"
+            className="font-display max-w-[15em] text-[clamp(2.9rem,7.4vw,7rem)] font-normal leading-[1.02] tracking-[-0.025em]"
           />
         </div>
 

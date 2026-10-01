@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Section from "./Section";
 import SplitReveal from "./SplitReveal";
 
-const EMAIL = "luisgservsp@gmail.com";
+const EMAIL = "guillenserveraluis@gmail.com";
 
 const ELSEWHERE = [
   { label: "GitHub", handle: "github.com/luis-guillen", href: "https://github.com/luis-guillen" },
