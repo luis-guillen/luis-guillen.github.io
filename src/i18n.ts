@@ -17,8 +17,6 @@ const resources = {
         close: "Close"
       },
       hero: {
-        open: "Open to opportunities",
-        location: "Las Palmas de Gran Canaria, Spain",
         subtitle: "AI Engineer · Tech Lead · Machine Learning",
         description: "I design and ship AI systems end to end, from RAG and LLM assistants to reinforcement learning, with the evaluation, MLOps and security that production needs.",
         viewProjects: "View projects",
@@ -28,7 +26,6 @@ const resources = {
           "From notebook to *production*.",
           "LLMs with *guardrails*."
         ],
-        localTime: "local time",
         photoCaption: "Las Palmas de Gran Canaria · AI Engineer",
         stackLabel: "Working stack",
         talk: "Let's talk",
@@ -162,7 +159,6 @@ const resources = {
       },
       footer: {
         backToTop: "Back to top",
-        localTime: "Local time",
         built: "Designed and built by Luis Guillén"
       },
       contact: {
@@ -197,8 +193,6 @@ const resources = {
         close: "Cerrar"
       },
       hero: {
-        open: "Abierto a oportunidades",
-        location: "Las Palmas de Gran Canaria, España",
         subtitle: "AI Engineer · Tech Lead · Machine Learning",
         description: "Diseño y llevo a producción sistemas de IA de principio a fin, desde RAG y asistentes con LLM hasta aprendizaje por refuerzo, con la evaluación, el MLOps y la seguridad que exige un entorno real.",
         viewProjects: "Ver proyectos",
@@ -208,7 +202,6 @@ const resources = {
           "Del notebook a *producción*.",
           "LLM con *salvaguardas*."
         ],
-        localTime: "hora local",
         photoCaption: "Las Palmas de Gran Canaria · Ingeniero de IA",
         stackLabel: "Stack de trabajo",
         talk: "Hablemos",
@@ -342,7 +335,6 @@ const resources = {
       },
       footer: {
         backToTop: "Volver arriba",
-        localTime: "Hora local",
         built: "Diseñado y desarrollado por Luis Guillén"
       },
       contact: {
