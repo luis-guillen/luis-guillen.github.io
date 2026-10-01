@@ -1,0 +1,6 @@
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+overrides:
+  # postprocessing >= 6.38 requires three >= 0.168; the app is on three 0.160
+  postprocessing: ~6.37.8
