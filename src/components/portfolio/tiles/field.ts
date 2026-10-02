@@ -1,6 +1,6 @@
 /**
- * Shared, allocation-free maths for the tile field so the grid, the labels and
- * the lights all agree on where each tile is at a given time.
+ * Shared, allocation-free maths for the tile field so the grid and the
+ * lights all agree on where each tile is at a given time.
  *
  * The field behaves like a sliding-tile board: every few seconds one whole row
  * slides one cell to the right, then one whole column slides one cell down,

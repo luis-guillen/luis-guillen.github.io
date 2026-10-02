@@ -16,7 +16,6 @@ export interface TileTheme {
   accent: THREE.Color;
   hot: THREE.Color;
   tile: THREE.Color;
-  label: THREE.Color;
 }
 
 function readTheme(): TileTheme {
@@ -28,7 +27,6 @@ function readTheme(): TileTheme {
     hot: cssColor("--primary", 12),
     // Near-black warm slate in dark mode, warm ceramic in light mode.
     tile: new THREE.Color(dark ? "#1a1612" : "#e6ded2"),
-    label: new THREE.Color(dark ? "#f3ebe0" : "#3b2f25"),
   };
 }
 
